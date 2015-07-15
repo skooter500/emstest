@@ -7812,7 +7812,7 @@ function _malloc($bytes) {
          $477 = HEAP32[$476>>2]|0;
          $478 = $477 & -8;
          $479 = ($478|0)==($rsize$3$lcssa$i|0);
-         L217: do {
+         L216: do {
           if ($479) {
            $T$0$lcssa$i = $475;
           } else {
@@ -7838,7 +7838,7 @@ function _malloc($bytes) {
             $490 = ($489|0)==($rsize$3$lcssa$i|0);
             if ($490) {
              $T$0$lcssa$i = $487;
-             break L217;
+             break L216;
             } else {
              $K12$029$i = $485;$T$028$i = $487;
             }
@@ -8433,7 +8433,7 @@ function _malloc($bytes) {
          $744 = $741 & -8;
          $745 = $741 >>> 3;
          $746 = ($741>>>0)<(256);
-         L331: do {
+         L332: do {
           if ($746) {
            $$sum3738$i$i = $719 | 8;
            $$sum124$i = (($$sum3738$i$i) + ($tsize$254$i))|0;
@@ -8609,7 +8609,7 @@ function _malloc($bytes) {
              $805 = HEAP32[(140)>>2]|0;
              $806 = $805 & $804;
              HEAP32[(140)>>2] = $806;
-             break L331;
+             break L332;
             } else {
              $807 = HEAP32[(152)>>2]|0;
              $808 = ($771>>>0)<($807>>>0);
@@ -8628,7 +8628,7 @@ function _malloc($bytes) {
              }
              $813 = ($R$1$i$i|0)==(0|0);
              if ($813) {
-              break L331;
+              break L332;
              }
             }
            } while(0);
@@ -8811,7 +8811,7 @@ function _malloc($bytes) {
         $893 = HEAP32[$892>>2]|0;
         $894 = $893 & -8;
         $895 = ($894|0)==($qsize$0$i$i|0);
-        L417: do {
+        L418: do {
          if ($895) {
           $T$0$lcssa$i25$i = $891;
          } else {
@@ -8837,7 +8837,7 @@ function _malloc($bytes) {
            $906 = ($905|0)==($qsize$0$i$i|0);
            if ($906) {
             $T$0$lcssa$i25$i = $903;
-            break L417;
+            break L418;
            } else {
             $K8$051$i$i = $901;$T$050$i$i = $903;
            }
@@ -10334,7 +10334,7 @@ if (Module['preInit']) {
 }
 
 // shouldRunNow refers to calling main(), not run().
-var shouldRunNow = false;
+var shouldRunNow = true;
 if (Module['noInitialRun']) {
   shouldRunNow = false;
 }
