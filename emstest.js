@@ -10334,7 +10334,7 @@ if (Module['preInit']) {
 }
 
 // shouldRunNow refers to calling main(), not run().
-var shouldRunNow = true;
+var shouldRunNow = false;
 if (Module['noInitialRun']) {
   shouldRunNow = false;
 }

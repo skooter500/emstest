@@ -1,18 +1,17 @@
 <html>
 <head>
-<script src = "emstest.js"></script>
+
 </head>
 <body>
 <textarea id="output" rows="8"></textarea>
 <script>
-
 	var abcContents = "X:1\nT:Jimmy Ward's Jig\nR:jig\nD:Matt Molloy: Heathery Breeze\nZ:id:hn-jig-103\nM:6/8\nK:G\n~G3 GAB|AGE GED|~G3 AGE|GED DEF|~G3 GAB|AGE GAB|cBA BGE|1 DED DEF:|2 DED D2B||\n|:cBA BAG|~A3 AGE|BcA BGE|EDE GAB|c2c BAG|ABA ABc|dcA AGE|1 GED D2B:|2 GED DEF||\n\n"
 	  var argv = [ "in.abc", "out.abc"];
 
       var Module = {
-	    arguments: argv, // This is ignored!!!
+	    arguments: argv, 
         preRun : function(){
-			console.log('prerun'); // This gets called AFTER the program has run
+			console.log('prerun'); 
 			FS.createDataFile("/", "in.abc", abcContents, true, true);
 		},
         postRun: [],
@@ -42,17 +41,16 @@
           }
         },        
         totalDependencies: 0,        
-		noInitialRun:true // THIS IS IGNORED! The program runs regardless
+		noInitialRun:true
       };
       window.onerror = function(event) {
         // TODO: do not warn on ok events like simulating an infinite loop or exitStatus
-        Module.setStatus('Exception thrown, see JavaScript console');
-        spinnerElement.style.display = 'none';
-        Module.setStatus = function(text) {
-          if (text) Module.printErr('[post-exception status] ' + text);
-        };
+        console.error(event);
       };
-run(); 
+</script>
+<script src = "emstest.js"></script>
+<script>
+run();
 </script>
 </body>
 </html>
