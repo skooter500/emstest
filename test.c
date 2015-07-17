@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+
 int main(int argc,char *argv[])
 {
 	if (argc != 3)
@@ -32,5 +33,12 @@ int main(int argc,char *argv[])
 	fclose(in);
 	fclose(out);
 	
+	return 0;
+}
+
+int test()
+{
+	char * params[] = {"", "in.abc", "out.mid"};
+	main(3, params);
 	return 0;
 }
